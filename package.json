@@ -1,0 +1,23 @@
+{
+  "name": "ws",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node --max-old-space-size=4096 ./serviceMain.js",
+    "debug": "node --max-old-space-size=4096 --nolazy --inspect-brk=9229 ./serviceMain.js",
+    "dev": "node --max-old-space-size=4096 --inspect=3000 ./serviceMain.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.0",
+    "mysql2": "*1.6.4",
+    "sequelize": "*4.38.0",
+    "sequelize-transactions": "*1.0.1"
+  },
+  "pkg": {
+    "scripts": "auth/*",
+    "assets": "models/*"
+  }
+}
